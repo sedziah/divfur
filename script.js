@@ -44,3 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+$(function() {
+  $("#header-placeholder").load("header.html");
+  $("#footer-placeholder").load("footer.html");
+});
+
+
+
