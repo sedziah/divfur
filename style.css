@@ -137,6 +137,12 @@ body {
 
 .feature-item h3 {
   margin: 10px 0;
+  font-family: var(--font-secondary);
+  color: whitesmoke;
+  font-weight: bold; /* Makes the font weight heavier */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  -webkit-font-smoothing: antialiased; /* For WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox macOS */
 }
 
 .feature-item:hover {
