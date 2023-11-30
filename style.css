@@ -25,6 +25,7 @@ body {
 /* Navbar Styles */
 .navbar {
   display: flex;
+  position: static;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
@@ -64,6 +65,8 @@ body {
   text-decoration: underline;
 }
 
+
+/* Hero Styles */
 .hero .slider {
   position: relative;
   width: 100%;
@@ -114,7 +117,7 @@ body {
   display: inline-block;
 }
 
-/* Pages */
+/* Homepage Pages Section */
 .feature-section {
   display: flex;
   justify-content: space-between;
@@ -129,24 +132,16 @@ body {
   position: relative;
   padding: 20px;
   box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.feature-icon {
-  /* Insert your icon styles here */
-  font-size: 40px; /* Example size */
-  margin-bottom: 10px;
-}
-
-h3 {
+.feature-item h3 {
   margin: 10px 0;
 }
 
-.dropdown-indicator {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-size: 24px;
+.feature-item:hover {
+  transform: scale(1.05); /* Slightly enlarge the item */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
 }
 
 /* Footer */
