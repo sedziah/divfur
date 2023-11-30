@@ -124,6 +124,10 @@ body {
   flex-wrap: wrap;
 }
 
+.feature-section a{
+  text-decoration: none;
+}
+
 .feature-item {
   flex-basis: calc(25% - 10px); /* Adjust the spacing between items */
   margin: 5px; /* Spacing for wrapping */
