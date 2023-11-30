@@ -1,23 +1,25 @@
 /* style.css */
 :root {
-  --color-primary: #005A9C; /* Primary color - for primary buttons and links */
-  --color-secondary: #F2F2F2; /* Secondary color - for backgrounds, etc. */
-  --color-accent: #E3C800; /* Accent color - for highlighting items, calls to action */
+  --color-primary: #005a9c; /* Primary color - for primary buttons and links */
+  --color-secondary: #f2f2f2; /* Secondary color - for backgrounds, etc. */
+  --color-accent: #e3c800; /* Accent color - for highlighting items, calls to action */
   --color-text: #333333; /* Primary text color */
-  --color-text-inverse: #FFFFFF; /* Inverse text color for use on dark backgrounds */
-  --color-navbar-bg: #FFFFFF; /* Navbar background color */
+  --color-text-inverse: #ffffff; /* Inverse text color for use on dark backgrounds */
+  --color-navbar-bg: #ffffff; /* Navbar background color */
   --color-navbar-link: #000000; /* Navbar link color */
-  --color-navbar-link-hover: #005A9C; /* Navbar link hover color */
-  --color-border: #E0E0E0; /* light grey color for borders */
-  --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Montserrat', sans-serif;
+  --color-navbar-link-hover: #005a9c; /* Navbar link hover color */
+  --color-border: #e0e0e0; /* light grey color for borders */
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%; /* Ensure the body takes full width */
   font-family: var(--font-primary);
+  overflow-x: hidden;
 }
 
 /* Navbar Styles */
@@ -54,7 +56,7 @@ html, body {
   padding: 10px;
   margin: 0 5px;
   font-family: Arial, sans-serif;
-  font-family: var(--font-secondary)
+  font-family: var(--font-secondary);
 }
 
 .navbar-links a:hover {
@@ -62,193 +64,170 @@ html, body {
   text-decoration: underline;
 }
 
-/* Hero Section Styles */
-/* .hero .slider {
-    position: relative;
-    width: 100%;
-    height: 500px; 
-    overflow: hidden;
-}
-
-.hero .slide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s;
-    object-fit: cover;
-    overflow: hidden;
-}
-
-.hero .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero .slide-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-text-inverse); 
-    text-align: center;
-    width: 100%; 
-}
-
-.hero .slide-overlay h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.5);
-    display: inline-block;
-}
-
-.hero .slide-overlay p {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.5); 
-    display: inline-block;
-}
-
-.hero .slide.active {
-    opacity: 1;
-} */
-
 .hero .slider {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Adjust the height as needed */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+  overflow: hidden;
 }
 
 .hero .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .hero .slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hero .slide-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-text-inverse);
-    text-align: center;
-    width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-text-inverse);
+  text-align: center;
+  width: 100%;
 }
 
 .hero .slide-overlay h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.5);
-    display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
 }
 
 .hero .slide-overlay p {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.5);
-    display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
+
+/* Pages */
+.feature-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex-basis: calc(25% - 10px); /* Adjust the spacing between items */
+  margin: 5px; /* Spacing for wrapping */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.feature-icon {
+  /* Insert your icon styles here */
+  font-size: 40px; /* Example size */
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+.dropdown-indicator {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Adjust the color to match your design */
-    color: #fff;
-    padding: 20px 0;
-    font-family: var(--font-primary);
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-family: var(--font-primary);
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 180px; /* Ensure columns don't get too narrow */
-    margin: 10px;
+  flex: 1;
+  min-width: 180px; /* Ensure columns don't get too narrow */
+  margin: 10px;
 }
 
 .footer-column h4 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .footer-column ul,
 .footer-column address {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-column a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 2;
+  text-decoration: none;
+  color: #fff;
+  line-height: 2;
 }
 
 .footer-bottom {
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #444; /* Slight border for visual separation */
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444; /* Slight border for visual separation */
 }
 
 .footer-bottom p {
-    margin: 0;
+  margin: 0;
 }
 
 /* Mobile and Tablet screens */
 @media (max-width: 768px) {
-/* Navbar Styles */
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar-links a {
-    margin: 10px 0;
-  }
-
+  /* Navbar Styles */
   .navbar-toggle {
     display: inline-block;
   }
 
+  .navbar-links {
+    display: none;
+  }
+
+  /* Pages */
+  .feature-item {
+    flex-basis: 100%; /* Each item takes full width on smaller screens */
+  }
+
   /* Footer Styles */
   .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .footer-column {
-        min-width: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
+  .footer-column {
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
 
-    .footer-bottom {
-        font-size: 0.8em; /* Adjust font size for smaller screens */
-    }
+  .footer-bottom {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
 }
