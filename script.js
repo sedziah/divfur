@@ -21,23 +21,13 @@ $(function() {
   $("#footer-placeholder").load("footer.html");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const navbarToggle = document.getElementById("navbar-toggle");
-  const navbarLinks = document.getElementById("navbar-links");
+document.addEventListener("DOMContentLoaded", function () {
+  var closeBtn = document.getElementById("close-btn");
+  var mobileDrawer = document.getElementById("mobile-drawer");
 
-  navbarToggle.addEventListener("click", () => {
-    navbarLinks.style.right = "0"; // Open the drawer
+  closeBtn.addEventListener("click", function () {
+    mobileDrawer.style.display = "none"; // Hide the mobile drawer
   });
 
-  // You can use the same toggle button to close or a separate close button as needed
-  navbarToggle.addEventListener("click", () => {
-    if (navbarLinks.style.right === "0px") {
-      navbarLinks.style.right = "-100%"; // Close the drawer
-    } else {
-      navbarLinks.style.right = "0"; // Open the drawer
-    }
-  });
+  // Include other JavaScript for toggling the drawer if necessary
 });
-
-
-
