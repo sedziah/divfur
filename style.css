@@ -65,7 +65,9 @@ body {
   text-decoration: underline;
 }
 
-
+.mobile-drawer {
+  display: none;
+}
 
 /* Hero Styles */
 .hero .slider {
@@ -287,19 +289,64 @@ footer {
   }
 
   .navbar-links {
-    position: fixed;
-    right: -100%; /* Start off the screen */
-    top: 0;
-    height: 100%;
-    width: 250px; /* Width of the drawer */
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    transition: right 0.3s ease; /* Animation for sliding in */
+    display: none;
   }
+
+  .mobile-drawer {
+    /* display: block; Always visible */
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.9
+    ); /* Semi-transparent black for overlay effect */
+    z-index: 2; /* Ensure it's above other content */
+    /* display: flex; Enable flexbox */
+    justify-content: center; /* Horizontally center the content */
+    padding-top: 90px;
+    /* align-items: center; Vertically center the content */
+  }
+
+  .mobile-navbar-links {
+    display: none; 
+    display: flex; /* Enable flexbox for the links */
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center; /* Center align the links */
+    margin-top: 20px; /* Margin at the top */
+    width: 100%; /* Full width within the drawer */
+    text-align: center; /* Center the text */
+  }
+
+  .mobile-navbar-links a {
+    padding: 10px; /* Padding for each link */
+    margin-bottom: 5px; /* Spacing between links */
+    color: white; /* Text color for the links */
+    text-decoration: none; /* Remove underline from links */
+    width: 100%; /* Full width for each link */
+    display: block; /* Make each link a block element */
+  }
+
+  .mobile-navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background on hover */
+  }
+
+  .close-btn {
+    position: absolute; /* Position the button absolutely within the drawer */
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* Button color */
+    font-size: 24px; /* Size of the close icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 3; /* Ensure it's above the other content */
+}
 
   /* Pages */
   /* .feature-item {
@@ -313,7 +360,6 @@ footer {
   .feature-item {
     width: 100%;
   }
-
 
   .box {
     width: 100%; /* Each box takes full width on smaller screens */
@@ -339,7 +385,6 @@ footer {
   .feature-item {
     flex-basis: 100%; /* Each item takes full width on smaller screens */
   }
-
 
   /* Footer Styles */
   .footer-container {
