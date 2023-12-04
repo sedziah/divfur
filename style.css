@@ -290,9 +290,44 @@ footer {
   }
 
   /* Pages */
+  /* .feature-item {
+    flex-basis: 100%; /* Each item takes full width on smaller screens 
+  } */
+
+  .container {
+    flex-direction: column; /* Stack the boxes on top of each other */
+  }
+
+  .feature-item {
+    width: 100%;
+  }
+
+
+  .box {
+    width: 100%; /* Each box takes full width on smaller screens */
+    /* margin: 10px 0; Adjust margin for vertical stacking */
+    height: auto; /* Adjust height as content may vary */
+  }
+
+  /* Set the order of the boxes */
+  .box1 {
+    order: 2; /* box1 will be second */
+  }
+
+  .box2 {
+    order: 1; /* box2 will be first */
+    padding-bottom: 10px;
+  }
+
+  .box3 {
+    order: 3; /* box3 will be third */
+  }
+
+  /* Adjustments for the feature items */
   .feature-item {
     flex-basis: 100%; /* Each item takes full width on smaller screens */
   }
+
 
   /* Footer Styles */
   .footer-container {
