@@ -2,9 +2,14 @@
 
 <body>
   <nav class="navbar">
-    <a href="index.html">
-      <img src="images/ucc_logo.png" alt="DiVFuR" class="navbar-logo" />
-    </a>
+    <div>
+      <a href="index.html"
+        ><img src="images/ucc_logo.png" alt="UCC Logo" class="navbar-logo" /></a
+      ><!--
+--><a href="index.html"
+        ><img src="images/freiburg.jpg" alt="Freiburg Logo" class="navbar-logo"
+      /></a>
+    </div>
 
     <!-- Include this button within your existing navbar -->
     <button class="navbar-toggle" id="navbar-toggle" onclick="toggleDrawer()">
@@ -39,7 +44,7 @@
   <script>
     function toggleDrawer() {
       var mobileDrawer = document.getElementById("mobile-drawer");
-      console.log("Hamburger button clicked")
+      console.log("Hamburger button clicked");
       mobileDrawer.style.display =
         mobileDrawer.style.display === "block" ? "none" : "block";
     }
