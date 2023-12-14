@@ -23,7 +23,7 @@ body {
 }
 
 /* Navbar Styles */
-.navbar {
+/* .navbar {
   display: flex;
   position: static;
   align-items: center;
@@ -31,10 +31,25 @@ body {
   padding: 10px;
   background-color: var(--color-navbar-bg);
   border-bottom: 1px solid var(--color-border); /* thin line */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*subtle shadow */
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); subtle shadow */
+  /* width: auto; */
+  /* font-family: var(--font-secondary);
+} */
+
+.navbar {
+  display: flex;
+  position: relative; /* This should be relative */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--color-navbar-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: auto;
   font-family: var(--font-secondary);
+  /* height: 50px; Example height, adjust as needed */
 }
+
 
 .navbar-logo {
   width: 70px; /* Adjust as needed */
@@ -51,13 +66,17 @@ body {
   display: flex;
 }
 
-.navbar-links a {
+.navbar-links a,
+.dropdown {
   text-decoration: none;
   color: var(--color-navbar-link);
   padding: 10px;
   margin: 0 5px;
   font-family: Arial, sans-serif;
   font-family: var(--font-secondary);
+  vertical-align: middle;
+  font-size: 16px; /* Adjust font size */
+  font-weight: normal;/*  Adjust font weight */
 }
 
 .navbar-links a:hover {
@@ -68,6 +87,48 @@ body {
 .mobile-drawer {
   display: none;
 }
+
+/* Style for Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-navbar-bg);
+  /* background-color: #f9f9f9; */
+  min-width: 160px;
+  box-shadow: none;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  padding-top: 15px;
+  z-index: 1;
+  /* border: solid 5px green; */
+  top: 100%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  /* background-color: #f1f1f1; */
+  color: teal;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
 
 /* Hero Styles */
 .hero .slider {
@@ -231,6 +292,45 @@ body {
   text-align: center;
 }
 
+.box3 h2 {
+  color: var(--color-primary);
+  text-align: center;
+  font-family: var(--font-primary);
+  margin-bottom: 20px;
+}
+
+.news-feed {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.news-item {
+  border-bottom: 1px solid var(--color-border); /* Add a border to each item */
+  padding: 10px 0; /* Add some padding */
+}
+
+.news-item:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+.news-item a {
+  text-decoration: none; /* Remove link underlining */
+  color: var(--color-text); /* Use the primary text color */
+  display: block; /* Allow the entire area to be clickable */
+}
+
+.news-item h3 {
+  font-size: 1.1rem; /* Adjust headline size */
+  font-family: var(--font-secondary);
+  margin-bottom: 5px; /* Add space below the headline */
+}
+
+.news-summary {
+  font-size: 0.9rem; /* Smaller font size for the summary */
+  color: var(--color-text);
+}
+
 /* Footer */
 footer {
   background-color: #333;
@@ -294,7 +394,7 @@ footer {
 
   .mobile-drawer {
     /* display: block; Always visible */
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -307,14 +407,12 @@ footer {
       0.8
     ); /* Semi-transparent black for overlay effect */
     z-index: 2; /* Ensure it's above other content */
-    /* display: flex; Enable flexbox */
     justify-content: center; /* Horizontally center the content */
     padding-top: 90px;
-    /* align-items: center; Vertically center the content */
   }
 
   .mobile-navbar-links {
-    display: none; 
+    /* display: none; */
     display: flex; /* Enable flexbox for the links */
     flex-direction: column; /* Stack the links vertically */
     align-items: center; /* Center align the links */
@@ -323,13 +421,19 @@ footer {
     text-align: center; /* Center the text */
   }
 
-  .mobile-navbar-links a {
+  .mobile-navbar-links a,
+  .dropdown .dropbtn {
     padding: 10px; /* Padding for each link */
     margin-bottom: 5px; /* Spacing between links */
     color: white; /* Text color for the links */
     text-decoration: none; /* Remove underline from links */
     width: 100%; /* Full width for each link */
     display: block; /* Make each link a block element */
+  }
+
+  .dropdown .dropbtn::before {
+    content: " ▼"; /* Add a down arrow to indicate dropdown */
+    font-size: 12px; /* Smaller font size for the arrow */
   }
 
   .mobile-navbar-links a:hover {
@@ -346,7 +450,7 @@ footer {
     font-size: 24px; /* Size of the close icon */
     cursor: pointer; /* Pointer cursor on hover */
     z-index: 3; /* Ensure it's above the other content */
-}
+  }
 
   /* Pages */
   /* .feature-item {
