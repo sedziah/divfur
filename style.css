@@ -331,6 +331,11 @@ body {
   color: var(--color-text);
 }
 
+/* Body */
+.body_header {
+  border: 2px solid gold;
+}
+
 /* Footer */
 footer {
   background-color: #333;
