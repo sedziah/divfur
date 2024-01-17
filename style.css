@@ -1,14 +1,14 @@
 /* style.css */
 :root {
-  --color-primary: #005a9c; /* Primary color - for primary buttons and links */
-  --color-secondary: #f2f2f2; /* Secondary color - for backgrounds, etc. */
-  --color-accent: #e3c800; /* Accent color - for highlighting items, calls to action */
-  --color-text: #333333; /* Primary text color */
-  --color-text-inverse: #ffffff; /* Inverse text color for use on dark backgrounds */
-  --color-navbar-bg: #ffffff; /* Navbar background color */
-  --color-navbar-link: #000000; /* Navbar link color */
-  --color-navbar-link-hover: #005a9c; /* Navbar link hover color */
-  --color-border: #e0e0e0; /* light grey color for borders */
+  --color-primary: #005a9c; 
+  --color-secondary: #f2f2f2; 
+  --color-accent: #e3c800; 
+  --color-text: #333333; 
+  --color-text-inverse: #ffffff; 
+  --color-navbar-bg: #ffffff; 
+  --color-navbar-link: #000000; 
+  --color-navbar-link-hover: #005a9c;
+  --color-border: #e0e0e0;
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Montserrat", sans-serif;
 }
@@ -17,28 +17,29 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%; /* Ensure the body takes full width */
+  width: 100%;
   font-family: var(--font-primary);
   overflow-x: hidden;
 }
 
-/* Navbar Styles */
-/* .navbar {
-  display: flex;
-  position: static;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: var(--color-navbar-bg);
-  border-bottom: 1px solid var(--color-border); /* thin line */
-/*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); subtle shadow */
-/* width: auto; */
-/* font-family: var(--font-secondary);
-} */
 
+/* Page Container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  border: solid blue;
+  min-height: 100vh; 
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+}
+
+/* Navbar Styles */
 .navbar {
   display: flex;
-  position: relative; /* This should be relative */
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
