@@ -46,7 +46,7 @@ body {
   border-bottom: 1px solid var(--color-border);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: auto;
-  font-family: var(--font-secondary);
+  font-family: var(--font-secondary);  
   /* height: 50px; Example height, adjust as needed */
 }
 
@@ -520,7 +520,7 @@ footer {
     flex-basis: 100%; /* Each item takes full width on smaller screens */
   }
 
-  /* Gallery */
+
   /* Gallery */
 .gallery-container {
   display: flex;
