@@ -1,12 +1,12 @@
 /* style.css */
 :root {
-  --color-primary: #005a9c; 
-  --color-secondary: #f2f2f2; 
-  --color-accent: #e3c800; 
-  --color-text: #333333; 
-  --color-text-inverse: #ffffff; 
-  --color-navbar-bg: #ffffff; 
-  --color-navbar-link: #000000; 
+  --color-primary: #005a9c;
+  --color-secondary: #f2f2f2;
+  --color-accent: #e3c800;
+  --color-text: #333333;
+  --color-text-inverse: #ffffff;
+  --color-navbar-bg: #ffffff;
+  --color-navbar-link: #000000;
   --color-navbar-link-hover: #005a9c;
   --color-border: #e0e0e0;
   --font-primary: "Roboto", sans-serif;
@@ -22,12 +22,11 @@ body {
   overflow-x: hidden;
 }
 
-
 /* Page Container */
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 /* Main Content */
@@ -46,7 +45,7 @@ body {
   border-bottom: 1px solid var(--color-border);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: auto;
-  font-family: var(--font-secondary);  
+  font-family: var(--font-secondary);
   /* height: 50px; Example height, adjust as needed */
 }
 
@@ -129,7 +128,7 @@ body {
 .hero .slider {
   position: relative;
   width: 100%;
-  height: 500px; 
+  height: 500px;
   overflow: hidden;
 }
 
@@ -356,6 +355,16 @@ body {
   border: 2px solid #ccc;
 }
 
+.logo-item {
+  width: 30%;
+  margin: 10px;
+  /* text-align: center; */
+}
+
+.gallery-logo img {
+  width: 100%;
+  height: 100px;
+}
 
 /* Footer */
 footer {
@@ -516,26 +525,24 @@ footer {
     flex-basis: 100%; /* Each item takes full width on smaller screens */
   }
 
-
   /* Gallery */
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-.gallery-item {
-  width: 100%;
-  margin: 10px;
-  text-align: center;
-}
+  .gallery-item {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+  }
 
-.gallery-item img {
-  width: 100%;
-  height: 250px;
-  border: 2px solid #ccc;
-}
-
+  .gallery-item img {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #ccc;
+  }
 
   /* Footer Styles */
   .footer-container {
